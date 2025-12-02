@@ -72,12 +72,3 @@ function genresearch() {
   })
   .catch(err => console.error(err));          
 }
-
-
-function fontincrease() {
-  // Get a reference to the target element
-  const target = document.getElementById('target');
-
-  // Toggle the 'active-style' class
-  target.classList.toggle('active-style');
-}
