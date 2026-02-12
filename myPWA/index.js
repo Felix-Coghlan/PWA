@@ -6,14 +6,14 @@ const app = express();
 app.get("/search", (req, res) => {
   const query = req.query.q;
   
-  // Construct the correct database path
+  // Construct database path
   const dbPath = path.join(__dirname, ".database/datasource.db"); 
 
   // Open the database connection
   const db = new sqlite.Database(dbPath, (err) => {
     if (err) {
       console.error("Database connection error:", err.message);
-      // Return immediately if connection fails
+      // Return if connection fails
       return res.status(500).json({ error: "Failed to connect to database." });
     }
   });
@@ -35,14 +35,14 @@ app.get("/search", (req, res) => {
 app.get("/genresearch", (req, res) => {
   const query = req.query.q;
   
-  // Construct the correct database path
+  // Construct path
   const dbPath = path.join(__dirname, ".database/datasource.db"); 
 
   // Open the database connection
   const db = new sqlite.Database(dbPath, (err) => {
     if (err) {
       console.error("Database connection error:", err.message);
-      // Return immediately if connection fails
+      // Return if connection fails
       return res.status(500).json({ error: "Failed to connect to database." });
     }
   });

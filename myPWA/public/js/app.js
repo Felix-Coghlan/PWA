@@ -38,7 +38,7 @@ function search() {
 let genreresult = "";
 
 function displayGenreResults(genreDataArray) {
-  // 1. Check if the array is empty or null
+  // Check if the array is empty or null
   if (!genreDataArray || genreDataArray.length === 0) {
     document.querySelector(".container").innerHTML = '<p>No games found with that genre. Try again using no capital letters</p>';
     return; // Exit the function
